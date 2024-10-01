@@ -20,7 +20,6 @@ Este proyecto me permitió poner en práctica conocimientos teóricos adquiridos
 ✦  [Datos y Fuentes](#datos-y-fuentes)    
 ✦  [Análisis Teórico del Modelo](#análisis-teórico-del-modelo)  
 ✦  [Resultados](#resultados)  
-✦  [Autor](#autor)    
 
 ---
 
@@ -32,23 +31,24 @@ Este proyecto me permitió poner en práctica conocimientos teóricos adquiridos
 
      ![image](https://github.com/user-attachments/assets/48635476-a253-484a-8710-8ad9657f863f)
 
-  3. Crear un entorno virtual: python -m venv entorno_virtual
+2. Crear un entorno virtual: python -m venv entorno_virtual
 
      ![image](https://github.com/user-attachments/assets/b3223ca8-8dba-49a9-970d-775d2a9da147)
 
-  5. Activar el entorno virtual:
+3. Activar el entorno virtual:
      * Windows: entorno_virtual\Scripts\activate 
      * macOS/Linux: source venv/bin/activate
-  6. Instalar las dependencias: pip install -r requirements.txt
+4. Instalar las dependencias: pip install -r requirements.txt
      
      ![image](https://github.com/user-attachments/assets/5846bbe4-1f82-42a6-b6f3-9b02cbd2bc82)
      
-  7. Instalacion de power bi
+5. Instalacion de power bi
      * Windows: Descargar directamente de la tienda microsoft
      * macOS/Linux: Crear un entorno virtual windows para realizar la descarga o usar la version web de power BI
 
 
 ## Estructura del Proyecto
+
 ✦ Archivos para el analisis exploratorio: Carpeta que contiene los archivos utilizados para el analaisis de datos en excel ademas de contener el notebook del EDA y los kpis realizados.
 
 ✦ Archivos Finales: Carpeta con un archivo Power BI que ofrece una visualización dinamica de los datos y de los kpis junto con los archivos en parquet que fueron utilizados.
@@ -57,7 +57,9 @@ Este proyecto me permitió poner en práctica conocimientos teóricos adquiridos
 
   
 ## Metodología del Proyecto
+
 ### Herramientas Utilizadas:
+
 ✦ Visual Studio Code: Editor de código para desarrollar y modificar el proyecto en un entorno virtual local.
 
 ✦ GitHub: Plataforma para almacenar el proyecto de forma global.
@@ -153,46 +155,68 @@ Este dataset fue creado para obtener la informacion de las latitudes y las longi
 
 ## Dashboard
 
-1. Portada = coloca algo
-2. Resumen general = visualizacion de los accesos totales, accesos por tecnologia, evolucion de tecnologias entre 2014 y 2024, Tendencia de los ingresos entre 2014 y 2024, tarjetas con visualizaciones de la tasa de creciemiento anual todo esto se puede observar de manera dinamica mediante filtros de año y trimestre
-3. Proyeccion de accesos por cada 100 hogares: Visualizacion de un mapa con las provincias segmentadas segun los accesos a internet por hogares siendo bajo(azul) menores a 50 accesos, Medio (verde) entre 51 y 70 accesos y Alto (rosa) mayores a 71 accesos, ademas una comparativa de barras de los accesos por cada provincia es una hoja dinamica mediante un filtro por provincia
-4. Proyeccion de velocidad media: Visualizacion de un mapa con las provincias segmentadas segun la velocidad media siendo bajo(azul) velocidades menores a 50 megas, Medio (verde) velocidades entre 50 y 95 megas  y Alto (rosa) velocidades mayores a 95 megas, ademas una comparativa de barras de la velocidad media por cada provincia es una hoja dinamica mediante un filtro por provincia
-5. Proyeccion de penetracion de fibra optica: mediante un grafico de areas apiladas se observa el crecimiento esperado para el proximo trimestre en las provincias con baja penetracion teniendo en cuenta el objetivo del 10% del kpi, ademas se observa cual es la velocidad media de dichas provincias  
+1. Portada = coloca algo  
+   
+3. Resumen general = visualizacion de los accesos totales, accesos por tecnologia, evolucion de tecnologias entre 2014 y 2024, Tendencia de los ingresos entre 2014 y 2024, tarjetas con visualizaciones de la tasa de creciemiento anual todo esto se puede observar de manera dinamica mediante filtros de año y trimestre  
+   
+4. Proyeccion de accesos por cada 100 hogares: Visualizacion de un mapa con las provincias segmentadas segun los accesos a internet por hogares siendo bajo(azul) menores a 50 accesos, Medio (verde) entre 51 y 70 accesos y Alto (rosa) mayores a 71 accesos, ademas una comparativa de barras de los accesos por cada provincia es una hoja dinamica mediante un filtro por provincia
+   
+5. Proyeccion de velocidad media: Visualizacion de un mapa con las provincias segmentadas segun la velocidad media siendo bajo(azul) velocidades menores a 50 megas, Medio (verde) velocidades entre 50 y 95 megas  y Alto (rosa) velocidades mayores a 95 megas, ademas una comparativa de barras de la velocidad media por cada provincia es una hoja dinamica mediante un filtro por provincia
+   
+6. Proyeccion de penetracion de fibra optica: mediante un grafico de areas apiladas se observa el crecimiento esperado para el proximo trimestre en las provincias con baja penetracion teniendo en cuenta el objetivo del 10% del kpi, ademas se observa cual es la velocidad media de dichas provincias  
 
 
-## Análisis Teórico del Modelo
+## Análisis Teórico
 
 A lo largo del proyecto, se analizo y grafico los datos obteniendo:
 
 ✦. analisis de la hoja velocidad sin rangos:
 Las 30 velocidades mas frecuentes varian entre las 6 megas y las 50 megas dando un entendimiento donde los usuarios prefieren velocidades mas altas y estables
+![image](https://github.com/user-attachments/assets/54c14a05-4f96-4c75-9cfc-51bafddf9d54)
+
 
 ✦. analisis de la hoja velocidad media por provincia:
 Se observo una tendencia ascendente en las velocidades medias indicando una migracion de tecnologias con bajas velocidades a una con conexiones mas estables y rapidas como fibra optica, ademas se visualizo una desigualdad regional con picos en capital federal de 229 megas y chubut con 20.5 megas dando un mercado potencial en las provincias con velocidades medias bajas.
 al analizar la variacion estacional se observo que el cuarto trimestre es cuando se alcanzan las velocidades mas altas de internet, lo que podria sugerir un mayor consumo de servicios digitales durante el fin de año, coincidiendo con eventos y celebraciones.
+![image](https://github.com/user-attachments/assets/d5dece08-033f-451f-a91b-75fd7108d4d4)
 
 ✦. analisis de la hoja Totales accesos por tecnologia:
-Observe mediante un grafico de linea la evolucion en accesos de las diferentes tecnologias analizadas, ADSL, Cable Modem, Fibra Optica y Wireless obteniendo asi una idea basica del aumento de la fibra optica la disminucion enorme del ADSL y la preferencia de los usuarios por el cablemodem al cumplir con un coste bajo pero manteniendo velocidades comodas para el usuario
+La adopción de tecnologias más modernas está reemplazando a las más antiguas, reflejando una tendencia hacia una mayor conectividad y acceso a Internet.
 La tasa de crecimiento anual de Fibra Óptica (2014-2024) es de: 38.95%
 La tasa de crecimiento anual de ADSL (2014-2024) es de: -14.62%
 La tasa de crecimiento anual de Cablemodem (2014-2024) es de: 8.97%
 La tasa de crecimiento anual de Wireless (2014-2024) es de: 22.77%
 
+![image](https://github.com/user-attachments/assets/e0ffb53b-5287-4d6e-9d83-551e4a0ed3b3)
 
-Con estas observaciones, se realizaron ajustes en el modelo para lograr un equilibrio entre las diferentes características y optimizar la precisión de las recomendaciones finales.
+
+✦. analisis de la hoja accesos por tecnologia:
+Las provincias muestran una enorme disparidad en el acceso a internet aun teniendo en cuenta su poblacion
+
+![image](https://github.com/user-attachments/assets/62ea65eb-3a1c-4d58-896d-726ff6e8ebec)
+
+✦. analisis de la hoja penetracion poblacional:
+El analisis se realizo sobre las provincias donde el acceso por cada 100 habitantes era menor.
+
+![image](https://github.com/user-attachments/assets/f06eb66c-93d1-4608-adf1-ba764133be53)
+
+✦. analisis de la hoja penetracion por hogares:
+Se observo un aumento constante en los accesos a internet, especialmente en el trimestre 1 del 2023 y 2024
+
+![image](https://github.com/user-attachments/assets/776fdf62-5802-41d4-a728-a6fd1f5e627d)
+
+✦. analisis de la hoja ingresos:
+Crecimiento Acelerado: A partir de 2020, los ingresos muestran un incremento más marcado, posiblemente impulsado por factores externos como la pandemia y la mayor digitalización. Esto indica un cambio positivo en la estrategia o el mercado.
+
+![image](https://github.com/user-attachments/assets/2d53281d-3429-4f50-b065-13c1a471a6a3)
+
+
+Con estas observaciones, se pudo obtener una idea mas clara sobre las recomendaciones a realizar a la empresa
 
 ## Resultados
 
-El modelo de recomendación ha demostrado ser eficaz al generar recomendaciones de películas basadas en diversas características relevantes. Los resultados muestran que el enfoque basado en la similitud del coseno permite recomendaciones personalizadas y coherentes. La API desplegada ofrece una forma sencilla de interactuar con el modelo, permitiendo consultas rápidas y efectivas.
+añadir recomendacion basados en los kpis 
 
 ## Autor
 
 ✦ Este proyecto fue realizado por **Karen Lizeth Barbosa Rojas**.
-
-## Links
-
-✦ [Proyecto en Render](https://proyecto-recomendacion-de-peliculas-ml.onrender.com) → Enlace al endpoint principal de la API. Para ver todas las consultas disponibles, puedes ingresar a la ruta `/Docs` o consultar las rutas descritas en el archivo `api.txt`, ubicado en la carpeta "Extras visuales".  
-> **Nota:** "El tiempo de demora en la reactivación de la API es incierto, ya que depende del tráfico que Render tenga en el momento en que se realiza la consulta, por favor tener paciencia y si no es posible ingresar en el momento vuelva a intentarlo mas tarde.".
-
-✦ [Video Explicativo](https://drive.google.com/drive/folders/1XxLPfaKRAwk-aDCei6feGbo6aGXxMTIQ?usp=sharing) → Enlace al video explicativo y demostrativo del proyecto desplegado.  
-> **Nota:** "El video da una idea generalizada de lo que puede entregar la api, tiene una duracion aproximada de 8:26.".
